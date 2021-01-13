@@ -139,5 +139,5 @@ EMAIL_USE_TLS = True
 
 if os.environ.get('DJANGO_PRODUCTION'):
     from .settings_prod import *
-else:
+if os.environ.get('DJANGO_DEVELOPMENT'):
     from .settings_dev import *
