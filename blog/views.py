@@ -9,7 +9,7 @@ from django.views.generic import (
     DeleteView
 )
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Event, Plane
 
 def home(request):
     context = {
@@ -71,3 +71,15 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About Page'})
+
+class HistoryListView(ListView):
+    model = Event
+    template_name = 'blog/history.html'
+    context_object_name = 'events'
+    ordering = ['year']
+
+class PlanesListView(ListView):
+    model = Plane
+    template_name = 'blog/planes.html'
+    context_object_name = 'planes'
+    ordering = ['manufacturer']

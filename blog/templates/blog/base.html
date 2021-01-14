@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-        <title>Django Blog - {{ title }}</title>
+        <title>Aviation Blog - {{ title }}</title>
     {% else %}
-        <title>Django Blog</title>
+        <title>Aviation Blog</title>
     {% endif %}
 </head>
 <body>
@@ -24,10 +24,10 @@
             <div class="container">
                 {% if user.is_authenticated %}
                     <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">
-                        <span class="text-highlight">{{ user.username }}</span> @ Django Blog
+                        <span class="text-highlight">{{ user.username }}</span> @ Aviation Blog
                     </a>
                 {% else %}
-                    <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>
+                    <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">In-Air</a>
                 {% endif %}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,6 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+                        <a class="nav-item nav-link" href="{% url 'blog-history' %}">Istoria Aviatiei</a>
+                        <a class="nav-item nav-link" href="{% url 'blog-planes' %}">Tipuri de Avioane</a>
                         <a class="nav-item nav-link" href="{% url 'blog-about' %}">Despre Proiect</a>
                     </div>
                     <!-- Navbar Right Side -->
@@ -70,7 +72,7 @@
                     {% if user.is_authenticated %}
                         <h3>Bine ai venit pe blog, {{ user.username }}</h3>
                     {% else %}
-                        <h3>Blogul Django</h3>
+                        <h3>In-Air Blog</h3>
                     {% endif %}
                     <p class='text-muted'>You can put any information here you'd like.
                     <ul class="list-group">

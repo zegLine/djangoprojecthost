@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h1>Istoria Aviatiei</h1>
+    {% for event in events %}
+        <div>
+            <h2 class="mt-3">{{ event.year }}</h2>
+            <p>
+               {{ event.content }}
+            </p>
+    </div>
+    {% endfor %} 
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <h1>Tipuri de Avioane</h1>
+    {% for plane in planes %}
+        <article class="media content-section">
+            <div class="media-body">
+                <h2 class="mt-3">{{ plane.manufacturer }} {{plane.name }}</h2>
+                <img class="pt-3 pb-3" src={{ plane.featured_photo.url }}/>
+                </br>
+                <span class="font-weight-bold">Primul Zbor: {{ plane.first_flight }}</span>
+                <p class="pt-2">
+                {{ plane.short_description }}
+                </p>
+            </div>
+        </article>
+    {% endfor %} 
+{% endblock content %}
