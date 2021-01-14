@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Post, Event, Plane
+from .models import Post, Event, Plane, PlaneVariation
 
 admin.site.register(Post)
 admin.site.register(Event)
 admin.site.register(Plane)
+admin.site.register(PlaneVariation)

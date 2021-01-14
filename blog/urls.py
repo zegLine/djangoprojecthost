@@ -7,7 +7,8 @@ from .views import (
     PostDeleteView,
     UserPostListView,
     HistoryListView,
-    PlanesListView
+    PlanesListView,
+    PlanesDetailView
 )
 from . import views
 
@@ -21,4 +22,5 @@ urlpatterns = [
     path('about/', views.about, name='blog-about'),
     path('history/', HistoryListView.as_view(), name='blog-history'),
     path('planes/', PlanesListView.as_view(), name='blog-planes'),
+    path('planes/<pk>', PlanesDetailView.as_view(), name='planes-detail'),
 ]

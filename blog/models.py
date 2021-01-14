@@ -55,3 +55,13 @@ class Plane(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.featured_photo.path)
+    
+class PlaneVariation(models.Model):
+    name = models.CharField(max_length=20)
+    base_plane = models.ForeignKey(Plane, related_name='variations', on_delete=models.CASCADE)
+    description = models.TextField(blank=True, null=True)
+    featured_photo = models.ImageField(default='default.jpg', upload_to='featured_images')
+
+    def __str__(self):
+        return f'{self.base_plane.name}-{self.name}'
+    

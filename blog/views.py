@@ -83,3 +83,6 @@ class PlanesListView(ListView):
     template_name = 'blog/planes.html'
     context_object_name = 'planes'
     ordering = ['manufacturer']
+
+class PlanesDetailView(DetailView):
+    model = Plane
