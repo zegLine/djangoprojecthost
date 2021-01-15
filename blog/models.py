@@ -65,3 +65,12 @@ class PlaneVariation(models.Model):
     def __str__(self):
         return f'{self.base_plane.name}-{self.name}'
     
+class PlaneImage(models.Model):
+    name = models.CharField(max_length=100)
+    photo = models.ImageField(default='default.jpg', upload_to='featured_images')
+    description = models.TextField(blank=True, null=True)
+
+    plane = models.ForeignKey(Plane, related_name='photos', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.name}'    
