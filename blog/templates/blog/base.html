@@ -74,11 +74,11 @@
                     {% else %}
                         <h3>In-Air Blog</h3>
                     {% endif %}
-                    <p class='text-muted'>You can put any information here you'd like.
+                    <p class='text-muted'>Documentatia proiectului poate fi descarcata de <a href="https://docs.google.com/">aici</a>.
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-light">Latest Posts</li>
-                        <li class="list-group-item list-group-item-light">Announcements</li>
-                        <li class="list-group-item list-group-item-light">Calendars</li>
+                        <li class="list-group-item list-group-item-light"><a href="https://www.airliners.net/">Fotografii cu avioane</a></li>
+                        <li class="list-group-item list-group-item-light"><a href="{% url 'blog-home' %}">Blog</a></li>
+                        <li class="list-group-item list-group-item-light"><a href="{% url 'blog-about' %}">Despre Proiect</a></li>
                         <li class="list-group-item list-group-item-light">
                             {% language 'ro' %}
                             Astazi este {% now "j F Y" %}

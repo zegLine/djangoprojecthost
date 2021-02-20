@@ -1,4 +1,40 @@
 {% extends "blog/base.html" %}
 {% block content %}
     <h1>Despre Acest Proiect</h1>
+    <div class="media-body content-section">
+        <h2 class="mt-3">Aviatia</h2>
+        <p class="pt-2">
+            Aviatia a fost intotdeauna un subiect care m-a pasionat.
+            De cand eram mic, ma uitam la avioane pe cer si ma intrebam
+            in continuu cum functioneaza. Cand am mai crescut, am inceput
+            sa ma uit la documentare despre accidente aviatice si, usor usor,
+            mi-am imbogatit cunostintele despre acest domeniu.
+        </p>
+        </hr>
+        <p class="pt-2">
+            Numele proiectului, <span class="font-weight-bold">In-Air</span> este o expresie
+            ce se traduce (din limba engleza) -> "In Aer".
+        </p>
+
+        <h2 class="mt-3">Aplicatia Web</h2>
+        <p class="pt-2">
+            Programarea este, de asemenea, o mare pasiunea de a mea. Daca as putea
+            sa aleg un limbaj de programare pe care sa il folosesc 
+            cat de des posibil, acela ar fi <a href="https://www.python.org/">Python</a>. Imi place sintaxa, imi plac particularitatile
+            limbajului si mi se pare foarte puternic. Din acest motiv m-am decis sa scriu
+            acest proiect in Python, folosind framework-ul <a href="https://www.djangoproject.com/">Django</a>.
+            Aceasta combinatie de tehnologii imi ofera puterea de a scrie aplicatii web
+            functionale si folositoare intr-un mod foarte eficient.
+        </p>
+
+        <h2 class="mt-3">Ajutor Aplicatie</h2>
+        <p class="pt-2">
+            Pentru a putea adauga postari pe blog, utilizatorul trebuie sa fie inregistrat.
+            Un cont se poate crea accesand pagina <a href="{% url 'register' %}">Inregistrare</a>.
+        </p>
+        <p>
+            Pentru usurinta, am creat un utilizator deja de test, care poate fi accesat la pagina
+            <a href="{% url 'login' %}">Logare</a> cu credidentialele din <a href="https://docs.google.com/">documentatie</a>.
+        </p>
+    </div>
 {% endblock content %}
