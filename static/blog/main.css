@@ -9,7 +9,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: #4c4c4c;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,4 +93,42 @@ a.article-title:hover {
 
 .text-highlight {
   color: #c4e5f8;
+}
+
+.carousel-item {
+  height: inherit;
+}
+
+.carousel-inner {
+  height: inherit;
+}
+
+.image-carousel {
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+
+  /* Set up positioning */
+  position: fixed;
+
+  /* Align horizontally */
+  left:0;
+  right:0;
+  margin:0 auto;   
+}
+
+.carousel-main {
+  height: 70vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel-main {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-main {
+    height: 40vh;
+  }
 }
